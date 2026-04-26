@@ -1,31 +1,34 @@
-# Finger Counting using Computer Vision
+# ✋ Finger Counting using Computer Vision
 
-This project detects and counts the number of fingers in real-time using a webcam.
+A real-time finger counting system using a webcam, built with OpenCV and MediaPipe.
+
+---
 
 ## 🚀 Features
-- Real-time hand detection
-- Finger counting using geometric (angle-based) logic
-- Supports multiple hands
-- Smooth output using buffering
+- Real-time hand detection  
+- Accurate finger counting using angle-based logic  
+- Supports multiple hands  
+- Smooth output using buffering  
+
+---
 
 ## 🧠 How it works
-MediaPipe detects 21 hand landmarks.
-Angles between finger joints are calculated:
-- Straight finger → large angle → counted
-- Bent finger → small angle → ignored
+- MediaPipe detects **21 hand landmarks**  
+- Angles between finger joints are calculated  
+- If angle is large → finger is open  
+- If angle is small → finger is closed  
+
+---
 
 ## 🛠 Tech Stack
-- Python
-- OpenCV
-- MediaPipe
+- Python  
+- OpenCV  
+- MediaPipe  
+
+---
 
 ## ▶️ Run
+
 ```bash
 pip install opencv-python mediapipe
 python finger_count.py
-
-
-## 📸 Demo
-
-<img src="Demo_1.png" width="400"/>
-<img src="Demo_2.png" width="400"/>
